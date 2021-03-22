@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="container">
       <div className="left">
-        <Menu />
+        <Menu fullName={fullName} setFullName={setFullName} />
       </div>
       <div className="right">
         {users.map((user) => (

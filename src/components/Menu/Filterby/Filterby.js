@@ -1,22 +1,13 @@
 import React from "react";
 import "./Filterby.css";
 
-export default function Filterby() {
+export default function Filterby({ title, value, onInput }) {
   return (
     <div>
-      <div>
-        <button type="sumbit" className="filter" id="filterbynamebotton">
-          FILTER BY NAME
-        </button>
-        <input type="text" id="username"></input>
+      <div type="sumbit" className="filter">
+        {title}
       </div>
-      <div>
-        <div className="line"></div>
-        <button type="sumbit" className="filter" id="filterbyage">
-          FILTER BY AGE
-        </button>
-        <input type="text" id="userage"></input>
-      </div>
+      <input type="text" value={value} onInput={onInput} />
       <div className="line"></div>
     </div>
   );
