@@ -1,19 +1,9 @@
 import React from "react";
 import "./App.css";
-import Card from "./components/Card";
-import Menu from "./components/Menu";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div className="container">
-      <div className="left">
-        <Menu />
-      </div>
-      <div className="right">
-        <Card />
-      </div>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;

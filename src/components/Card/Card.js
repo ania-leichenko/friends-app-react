@@ -1,20 +1,26 @@
 import React from "react";
-import imageSrc from "../../img/cat.jpg";
 import "./Card.css";
 
-function Card() {
- return (
-     <div className="card">
-    <div className="name">Ania Leicheinko</div>
-      <div className="img">
-      <img title="my-img" src={imageSrc} alt="my-img" />
+function Card({ user }) {
+  return (
+    <div className={`card ${user.gender}`}>
+      <div className="name">
+        {user.name.title}
+        {user.name.first}
+        {user.name.last}
       </div>
-      <div className="age">I have 27 years old.</div>
+      <div
+        className="img"
+        style={{ backgroundImage: `url(${user.picture.medium})` }}
+      ></div>
+      <div className="age">I have {user.dob.age} years old.</div>
       <div className="information">
-       ania.leichenko@example.com (163)-188-2299
+        {user.email}
+        {user.cell}
       </div>
-       <div className="sex">Female</div>
-    </div> );
+      <div className="sex">{user.gender}</div>
+    </div>
+  );
 }
 
 export default Card;

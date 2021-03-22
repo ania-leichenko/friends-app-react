@@ -1,33 +1,51 @@
 .card {
-    border: solid grey 2px;
-    height: 400px;
-    width: 300px;
-    margin-left: 60px;
-    margin-bottom: 15px;
-  }
-  .name {
-    text-align: center;
-    font-size: 22px;
-    background-color: pink;
-    height: 40px;
-  }
-  .age {
-    text-align: center;
-    font-weight: bold;
-  }
-  .information {
-    text-align: center;
-  }
-  .sex {
-    text-align: center;
-    font-size: 22px;
-    color: pink;
-  }
-  .img img {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-  }
-  .img {
-    text-align: center;
-  }
+  position: relative;
+  border: solid grey 2px;
+  height: 400px;
+  width: 300px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.name {
+  text-align: center;
+  font-size: 22px;
+  height: 40px;
+}
+.age {
+  text-align: center;
+  font-weight: bold;
+}
+.information {
+  text-align: center;
+}
+.sex {
+  text-align: center;
+  font-size: 22px;
+  color: pink;
+  position: absolute;
+  bottom: 0px;
+  width: 100% 
+}
+.img {
+  display: inline-block;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.card.male .name {
+  background-color: rgb(164, 211, 250);
+}
+.card.female .name {
+  background-color: pink
+}
+.card.male .sex {
+  color: rgb(164, 211, 250);
+}
+.card.female .sex {
+  color: pink;
+}
