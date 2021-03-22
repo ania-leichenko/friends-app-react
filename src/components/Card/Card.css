@@ -1,0 +1,33 @@
+.card {
+    border: solid grey 2px;
+    height: 400px;
+    width: 300px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+  }
+  .name {
+    text-align: center;
+    font-size: 22px;
+    background-color: pink;
+    height: 40px;
+  }
+  .age {
+    text-align: center;
+    font-weight: bold;
+  }
+  .information {
+    text-align: center;
+  }
+  .sex {
+    text-align: center;
+    font-size: 22px;
+    color: pink;
+  }
+  .img img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+  }
+  .img {
+    text-align: center;
+  }

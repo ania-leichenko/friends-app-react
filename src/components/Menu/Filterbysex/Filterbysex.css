@@ -1,0 +1,18 @@
+label {
+    margin-right: 15px;
+    line-height: 32px;
+  }
+  .radioButton {
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+  }
+  .line {
+    line-height: 1.5em;
+    border-bottom: 2px solid rgb(81, 17, 155);
+    padding: 10px;
+  }
+ 

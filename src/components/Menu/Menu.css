@@ -1,0 +1,9 @@
+.menu {
+    background-color:rgb(149, 97, 216);
+    height: 560px;
+    border: solid rgb(81, 17, 155) 5px;
+    width: 260px; 
+  }
+  form {
+    text-align: center;
+  }
