@@ -6,6 +6,12 @@ import Reset from "./Reset/Reset";
 import Sorting from "./Sorting";
 
 export default function Menu({ fullName, setFullName, age, setAge }) {
+  const resetHandler = (event) => {
+    event.preventDefault();
+    setFullName('');
+    setAge('');
+  };
+
   return (
     <div className="menu">
       <form>
@@ -20,7 +26,7 @@ export default function Menu({ fullName, setFullName, age, setAge }) {
           value={age}
           onInput={(event) => setAge(event.target.value)}
         />
-        <Reset />
+        <Reset onClick={resetHandler} />
         <Sorting />
       </form>
     </div>
