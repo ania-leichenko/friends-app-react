@@ -5,10 +5,7 @@ import Filterby from "./Filterby/Filterby";
 import Reset from "./Reset/Reset";
 import Sorting from "./Sorting";
 
-export default function Menu({
-  fullName,
-  setFullName
-}) {
+export default function Menu({ fullName, setFullName, age, setAge }) {
   return (
     <div className="menu">
       <form>
@@ -18,7 +15,11 @@ export default function Menu({
           value={fullName}
           onInput={(event) => setFullName(event.target.value)}
         />
-        <Filterby title="FILTER BY AGE" />
+        <Filterby
+          title="FILTER BY AGE"
+          value={age}
+          onInput={(event) => setAge(event.target.value)}
+        />
         <Reset />
         <Sorting />
       </form>

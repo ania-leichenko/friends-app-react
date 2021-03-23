@@ -4,7 +4,7 @@ import Menu from "../components/Menu";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
-  const [age, setAge] = useState(0);
+  const [age, setAge] = useState("");
   const [fullName, setFullName] = useState("");
   const [gender, setGender] = useState("");
 
@@ -27,10 +27,19 @@ export default function Home() {
     });
   }
 
+  if (age !== "") {
+    filteredUsers = filteredUsers.filter((user) => user.dob.age === Number(age));
+  }
+
   return (
     <div className="container">
       <div className="left">
-        <Menu fullName={fullName} setFullName={setFullName} />
+        <Menu
+          fullName={fullName}
+          setFullName={setFullName}
+          age={age}
+          setAge={setAge}
+        />
       </div>
       <div className="right">
         {filteredUsers.map((user) => (
