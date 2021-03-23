@@ -5,9 +5,7 @@ function Card({ user }) {
   return (
     <div className={`card ${user.gender}`}>
       <div className="name">
-        {user.name.title}
-        {user.name.first}
-        {user.name.last}
+        {user.name.title} {user.name.first} {user.name.last}
       </div>
       <div
         className="img"

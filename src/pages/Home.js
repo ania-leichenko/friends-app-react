@@ -16,16 +16,40 @@ export default function Home() {
       });
   }, []);
 
+  let filteredUsers = users;
+  if (fullName !== "") {
+    filteredUsers = filteredUsers.filter((user) => {
+      const fullNameLowerCase = fullName.toLowerCase();
+      return (
+        user.name.first.toLowerCase().includes(fullNameLowerCase) ||
+        user.name.last.toLowerCase().includes(fullNameLowerCase)
+      );
+    });
+  }
+
   return (
     <div className="container">
       <div className="left">
         <Menu fullName={fullName} setFullName={setFullName} />
       </div>
       <div className="right">
-        {users.map((user) => (
+        {filteredUsers.map((user) => (
           <Card key={user.login.uuid} user={user} />
         ))}
       </div>
     </div>
   );
 }
+
+/*
+const func = ({ name, age }) => {
+    console.log(name, age);
+}
+
+const props = {
+    name: 'Anna',
+    age: null,
+};
+func(props);
+
+*/

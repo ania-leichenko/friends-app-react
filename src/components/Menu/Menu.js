@@ -5,7 +5,10 @@ import Filterby from "./Filterby/Filterby";
 import Reset from "./Reset/Reset";
 import Sorting from "./Sorting";
 
-export default function Menu({ fullName, setFullName }) {
+export default function Menu({
+  fullName,
+  setFullName
+}) {
   return (
     <div className="menu">
       <form>
