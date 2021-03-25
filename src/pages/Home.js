@@ -7,6 +7,7 @@ export default function Home() {
   const [age, setAge] = useState("");
   const [fullName, setFullName] = useState("");
   const [gender, setGender] = useState("");
+  const [sortBy, setSortBy] = useState(["age", 0]);
 
   useEffect(() => {
     fetch(`https://randomuser.me/api/?results=52`)
@@ -39,6 +40,8 @@ export default function Home() {
           setFullName={setFullName}
           age={age}
           setAge={setAge}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
         />
       </div>
       <div className="right">
@@ -49,16 +52,3 @@ export default function Home() {
     </div>
   );
 }
-
-/*
-const func = ({ name, age }) => {
-    console.log(name, age);
-}
-
-const props = {
-    name: 'Anna',
-    age: null,
-};
-func(props);
-
-*/

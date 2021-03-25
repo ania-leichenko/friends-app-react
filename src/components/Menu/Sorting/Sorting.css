@@ -1,18 +1,21 @@
 .knobage {
-    text-align:left;
-  }
-  .knobname {
-    text-align:left;
-  }
-  .arrow img{
-   width: 20px;
-  }
-  .arrow {
-    text-align: right;
-  }
-  .wrap {
+  text-align: left;
+}
+.knobname {
+  text-align: left;
+}
+.arrow img {
+  width: 20px;
+}
+.arrow {
+  text-align: right;
+}
+.wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  }
+}
+.arrowButton.is-active {
+  background-color: purple;
+}
