@@ -29,7 +29,38 @@ export default function Home() {
   }
 
   if (age !== "") {
-    filteredUsers = filteredUsers.filter((user) => user.dob.age === Number(age));
+    filteredUsers = filteredUsers.filter(
+      (user) => user.dob.age === Number(age)
+    );
+  }
+
+  if (sortBy[0] !== "") {
+    let compare;
+    if (sortBy[0] === "age") {
+      if (sortBy[1] === 0) {
+        compare = (a, b) => a.dob.age - b.dob.age;
+      } else {
+        compare = (a, b) => b.dob.age - a.dob.age;
+      }
+    }
+    if (sortBy[0] === "name") {
+      if (sortBy[1] === 0) {
+        compare = (a, b) => {
+          if (a.name.first <= b.name.first) {
+            return -1;
+          }
+          return 1;
+        };
+      } else {
+        compare = (a, b) => {
+          if (a.name.first <= b.name.first) {
+            return 1;
+          }
+          return -1;
+        };
+      }
+    }
+    filteredUsers.sort(compare);
   }
 
   return (
